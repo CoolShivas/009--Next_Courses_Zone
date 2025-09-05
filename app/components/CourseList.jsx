@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { courses, courseDetails } from "@/data";
 
@@ -25,7 +27,14 @@ const CourseList = () => {
                       border: "1px solid rgba(255, 255, 255, 0.1",
                       boxShadow: "0px 4px 8px rgba(0,0,0,0.2)",
                       cursor: "pointer",
+                      transition: "all 0.3s ease",
                     }}
+                    onMouseEnter={(e) =>
+                      (e.currentTarget.style.transform = "translateY(-5px)")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.currentTarget.style.transform = "translateY(0)")
+                    }
                   >
                     <div className="display-4 mb-3 text-light">
                       {curElem.icon}
