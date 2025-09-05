@@ -11,7 +11,18 @@ const CourseList = () => {
       </center>
       <div>
         <div className="container my-5 d-flex flex-column justify-center">
-          <div className="row w-100 justify-content-center">Hello World</div>
+          <div className="row w-100 justify-content-center">
+            {courses.map((curElem) => {
+              return (
+                <div key={curElem.id} className="col-md-4 mb-4">
+                  <div className="display-4 mb-3 text-light">
+                    {curElem.icon}
+                  </div>
+                  <div className="card-title text-light">{curElem.title}</div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </>

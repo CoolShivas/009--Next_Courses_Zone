@@ -27,9 +27,7 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
         />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
+      <body className="bg-dark text-light">{children}</body>
     </html>
   );
 }
