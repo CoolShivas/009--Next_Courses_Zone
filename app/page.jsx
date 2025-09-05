@@ -1,9 +1,13 @@
 import React from "react";
+import CourseList from "./components/CourseList";
 
 const HomePage = () => {
   return (
     <>
-      <center>Welcome to the Home Page</center>
+      <center>
+        <h1>Welcome to the Course Zone.</h1>
+      </center>
+      <CourseList />
     </>
   );
 };
