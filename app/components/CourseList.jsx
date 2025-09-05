@@ -15,10 +15,23 @@ const CourseList = () => {
             {courses.map((curElem) => {
               return (
                 <div key={curElem.id} className="col-md-4 mb-4">
-                  <div className="display-4 mb-3 text-light">
-                    {curElem.icon}
+                  <div
+                    className="card p-4 text-center"
+                    style={{
+                      backgroundColor: "#2F2F3F",
+                      borderRadius: "12px",
+                      maxWidth: "300px",
+                      width: "100%",
+                      border: "1px solid rgba(255, 255, 255, 0.1",
+                      boxShadow: "0px 4px 8px rgba(0,0,0,0.2)",
+                      cursor: "pointer",
+                    }}
+                  >
+                    <div className="display-4 mb-3 text-light">
+                      {curElem.icon}
+                    </div>
+                    <div className="card-title text-light">{curElem.title}</div>
                   </div>
-                  <div className="card-title text-light">{curElem.title}</div>
                 </div>
               );
             })}
