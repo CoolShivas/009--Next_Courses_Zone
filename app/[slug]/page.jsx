@@ -3,6 +3,7 @@
 import React from "react";
 import { courseDetails } from "@/data";
 import { FaClock, FaLayerGroup, FaArrowLeft } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 const page = ({ params }) => {
   // console.log("Printing the CourseDetails list are :-", courseDetails);
@@ -15,7 +16,9 @@ const page = ({ params }) => {
     return curElem.title.toLocaleLowerCase().includes(slug.toLocaleLowerCase());
   });
 
-  console.log(detailsOfCourse); // Getting the data of particular items;
+  //console.log(detailsOfCourse); // Getting the data of particular items;
+
+  const router = useRouter();
 
   return (
     <>
@@ -129,6 +132,14 @@ const page = ({ params }) => {
                 </li>
               ))}
             </ul>
+            <div className="d-grid col-sm-6 mx-auto">
+              <button
+                className="btn btn-outline-warning mt-4 shadow-sm"
+                onClick={() => router.push("/")}
+              >
+                <FaArrowLeft /> Back To Courses
+              </button>
+            </div>
           </div>
         </div>
       </div>
