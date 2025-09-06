@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import { courses, courseDetails } from "@/data";
+import { courses } from "@/data";
 import Link from "next/link";
 
 const CourseList = () => {
   //   console.log("Printing the Courses list are :-", courses);
-  //   console.log("Printing the CourseDetails list are :-", courseDetails);
+
   return (
     <div>
       <h1 className="text-center text-light my-3">
